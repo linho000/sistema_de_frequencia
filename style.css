@@ -1,0 +1,338 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Cor de fundo preta */
+    color: #fff; /* Cor do texto branca */
+}
+
+p{
+    text-align: center;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333; /* Alterado para cor de fundo branca totalmente opaca */
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-content {
+    background-color: #fff; /* Alterado para cor de fundo branca */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #25D366;
+    position: relative;
+}
+
+
+#username-input {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 25%;
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    display: block; /* Faz com que ocupe a largura total disponível */
+    margin-right: auto; /* Empurra para a esquerda */
+    margin-left: auto; /* Empurra para a direita */
+}
+
+#set-username-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #25D366;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 25%;
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    display: block; /* Faz com que ocupe a largura total disponível */
+    margin-right: auto; /* Empurra para a esquerda */
+    margin-left: auto; /* Empurra para a direita */
+}
+
+
+.chat-title {
+    text-align: center;
+    margin-top: 20px; /* Adicionado espaçamento acima do título */
+    color: #25D366; /* Cor verde para o título "Chat" */
+}
+
+.chat-container {
+    max-width: 400px;
+    margin: 20px auto; /* Centraliza o chat na tela */
+    background-color: #333; /* Cor de fundo do contêiner de bate-papo */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#message-input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555; /* Cor da borda do input */
+    border-radius: 5px;
+    color: #000; /* Cor do texto do input */
+}
+
+#send-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #25D366; /* Cor de fundo do botão de envio */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#chat-output {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#chat-output > div {
+    margin: 5px 0;
+}
+
+#chat-output strong {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Estilo para mensagens do usuário */
+.chat-container .user-message {
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 10px;
+    max-width: 70%;
+}
+
+/* Estilo para mensagens do bot */
+.bot-modal-content .bot-message {
+    background-color: #128C7E;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    max-width: 70%;
+}
+
+#bot-message-input {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+}
+
+#bot-send-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #128C7E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: calc(100% - 20px);
+}
+
+.bot-buttoon {
+    position: fixed;
+    top: 20px; /* Posicionado no canto superior */
+    left: 20px; /* Posicionado no canto direito */
+    background-color: #444; /* Cor de fundo do botão */
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.bot-buttoo {
+    position: fixed;
+    left: 20px;
+    background-color: #444; /* Cor de fundo do botão */
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+#game{
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Estilos para o botão do bot */
+.bot-button {
+    position: fixed;
+    top: 20px; /* Posicionado no canto superior */
+    right: 20px; /* Posicionado no canto direito */
+    background-color: #444; /* Cor de fundo do botão */
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilo para a logo de perguntas */
+.help-icon {
+    position: fixed;
+    bottom: 20px; /* Posicionado no canto inferior */
+    left: 20px; /* Posicionado no canto esquerdo */
+    font-size: 24px;
+    cursor: pointer;
+    color: #25D366; /* Cor do ícone de perguntas */
+}
+
+/* Estilos para o modal de ajuda */
+.help-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.help-modal-content {
+    background-color: #000; /* Cor de fundo preta */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #25D366; /* Cor verde para o texto do modal de ajuda */
+    position: relative; /* Adicionado para posicionar o botão de fechar corretamente */
+}
+
+#help-close {
+    position: absolute;
+    top: 10px; /* Posicionado no canto superior direito */
+    right: 10px; /* Posicionado no canto superior direito */
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff; /* Cor do ícone de fechar */
+}
+
+/* Estilos para o modal do bot */
+.bot-modal {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 400px;
+    background-color: #25D366; /* Cor de fundo do modal do bot */
+    color: #fff;
+    border-radius: 10px 0 0 0;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.bot-modal-content {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #444; /* Cor de fundo do modal do bot */
+    margin-bottom: 60px; /* Adicionado para garantir que o botão e o input permaneçam dentro */
+}
+
+#bot-close {
+    position: absolute;
+    top: 10px; /* Posicionado no canto superior direito */
+    right: 10px; /* Posicionado no canto superior direito */
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff; /* Cor do ícone de fechar */
+}
+
+#bot-chat-output {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: calc(100% - 90px); /* Adicionado para limitar a altura e permitir que o input e botão fiquem fixos */
+}
+
+/* Estilo para mensagens do bot no modal do bot */
+.bot-modal-content .bot-message {
+    background-color: #128C7E; /* Cor do botão de enviar do bot */
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    max-width: 70%;
+}
+
+#bot-message-input {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+}
+
+#bot-send-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #128C7E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: calc(100% - 20px);
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .chat-container {
+        max-width: 100%;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .chat-container {
+        padding: 10px;
+    }
+
+    #message-input {
+        padding: 8px;
+    }
+
+    #send-button {
+        padding: 8px;
+    }
+
+    .modal-content {
+        width: 90%;
+        max-width: 90%;
+    }
+}
