@@ -1,0 +1,64 @@
+.button-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+form {
+   max-width: 800px;
+   margin: 0 auto;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 4px;
+   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#form_group_up {
+   display: flex;
+   justify-content: center;
+}
+
+#register-students {
+   max-width: 800px;
+   margin: 0 auto;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 4px;
+   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#register-guardian {
+   max-width: 800px;
+   margin: 0 auto;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 4px;
+   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+   margin-bottom: 1rem;
+}
+
+label {
+   display: block;
+   font-weight: bold;
+   margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+[type="date"],
+[type="email"],
+textarea {
+   width: 100%;
+   padding: 0.5rem;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 1rem;
+   margin-top: 0.2rem;
+   resize: vertical;
+}
+
+.button-container {
+   margin-top: 1rem;
+}

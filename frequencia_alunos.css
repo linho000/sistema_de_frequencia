@@ -1,0 +1,22 @@
+input[type="radio"] {
+   margin: 0;
+   padding: 0;
+}
+
+input[type="submit"] {
+   padding: 10px 10px;
+   background-color: #4CAF50;
+   color: #fff;
+   border: none;
+   cursor: pointer;
+   font-size: 16px;
+   border-radius: 4px;
+   width: 150px;
+   text-align: center;
+   margin-top: 15px;
+   transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+   background-color: #45a049;
+}

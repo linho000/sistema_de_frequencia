@@ -1,0 +1,80 @@
+/* Estilização para o cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  
+  /* Estilização dos botões de navegação */
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  .button-container a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+  }
+  
+  /* Estilos padrão para os botões */
+  .button-container button {
+    padding: 10px 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 150px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-container button:hover {
+    background-color: #45a049;
+  }
+  
+  .button-container .active {
+    background-color: #295d2b;
+  }
+  
+  /* Estilos para telas menores */
+  @media (max-width: 600px) {
+    .button-container button {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Estilos para tornar o conteúdo responsivo */
+  @media (max-width: 600px) {
+  
+    /* Estilização para o cabeçalho */
+    header {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  
+    /* Estilos para os botões de navegação */
+    .button-container {
+      margin-top: 10px;
+    }
+  
+    .button-container a {
+      display: block;
+      margin: 5px;
+    }
+  
+    /* Estilos para os botões */
+    .button-container button {
+      padding: 8px 16px;
+      font-size: 14px;
+      width: 100%;
+    }
+  }
